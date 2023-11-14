@@ -12,7 +12,7 @@ incrementBtn.addEventListener("click", function () {
   // increment the count variable when the button is clicked
   count += 1;
   // change the count-el in the HTML to reflect the new count
-  document.getElementById("count").textContent = count;
+  countEl.textContent = count;
 });
 
 // Save button functionality
@@ -20,10 +20,10 @@ incrementBtn.addEventListener("click", function () {
 saveBtn.addEventListener("click", function () {
   // Create a variable that contains both the count and the dash separator, i.e. "12 - "
   let strCount = count + " - ";
-  //   Render the variable in the saveEl using innerText
+  //   Render the variable in the saveEl using textcontent
   saveEl.textContent += strCount;
+  console.log(saveEl);
+  // reset count element and count variable to 0
+  countEl.textContent = 0;
+  count = 0;
 });
-
-// 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
-// 3. Render the variable in the saveEl using innerText
-// NB: Make sure to not delete the existing content of the paragraph
